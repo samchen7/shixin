@@ -4,13 +4,18 @@
 
 ## 本地预览
 
-任意静态服务器即可，例如：
+只看页面可以用任意静态服务器：
 
 ```bash
-npx --yes serve .
+python3 -m http.server 5500 --bind 127.0.0.1
 ```
 
-打开提示的本地地址即可。
+打开 http://127.0.0.1:5500/ 。本机要用激活码走 Blob 下载时，先把 Blob store 连上 Development，再：
+
+```bash
+vercel env pull .env.local --yes
+vercel dev
+```
 
 ## 部署
 
@@ -29,4 +34,4 @@ npx --yes serve .
 
 上线付费版本时，用服务端接口替换演示适配器：创建 Checkout 会话、验证支付 webhook、持久化订单与下载权益，再通过已认证接口签发短期下载 URL。支付返回页面只查询服务端权益，不应把跳转参数当作付款成功证明。激活码也需要改成服务端验证。
 
-当前 APK 仍位于公开的 `/downloads/shixin.apk`；前端激活码和浏览器存储不提供真实下载保护。正式付费下载需要把 APK 移出公开静态目录，并由服务端校验权限后发放。
+生产环境的 APK 放在私有 Vercel Blob 里，通过 `/api/download` 校验激活码后再流出。仓库不再跟踪安装包。本机静态预览仍可把 `downloads/shixin.apk` 放在本地作后备（已 gitignore）。前端激活码和浏览器存储仍是 Demo 门禁，不是完整授权。

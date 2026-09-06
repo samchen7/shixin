@@ -4,3 +4,6 @@
 !.env.example
 .DS_Store
 node_modules
+.env*.local
+downloads/*.apk
+!downloads/.gitkeep

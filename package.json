@@ -1,0 +1,19 @@
+{
+  "name": "shixin",
+  "private": true,
+  "version": "1.0.0",
+  "description": "拾信落地页：把旧短信收进 Gmail。",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samchen7/shixin.git"
+  },
+  "license": "ISC",
+  "homepage": "https://github.com/samchen7/shixin#readme",
+  "dependencies": {
+    "@vercel/blob": "^2.8.0"
+  }
+}
