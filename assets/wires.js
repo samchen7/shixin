@@ -3,7 +3,7 @@
   var svg = document.getElementById('wires');
   if(!cmp || !svg) return;
   var NS = 'http://www.w3.org/2000/svg';
-  var keys = ['name','who','time','body'];
+  var keys = ['name','who','me','time','body'];
 
   function els(k){
     return {
@@ -42,12 +42,18 @@
 
   cmp.querySelectorAll('.lk').forEach(function(n){
     var k = n.getAttribute('data-k');
+    n.tabIndex = 0;
+    n.addEventListener('focus', function(){ set(k,true); });
+    n.addEventListener('blur', function(){ set(k,false); });
     n.addEventListener('mouseenter', function(){ set(k,true); });
     n.addEventListener('mouseleave', function(){ set(k,false); });
   });
 
   draw();
   window.addEventListener('resize', draw);
+  cmp.addEventListener('contactchange', draw);
+  cmp.addEventListener('transitionend', draw);
+  cmp.addEventListener('animationend', draw);
   if(document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
   window.addEventListener('load', draw);
 })();
