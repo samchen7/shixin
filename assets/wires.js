@@ -3,7 +3,7 @@
   var svg = document.getElementById('wires');
   if(!cmp || !svg) return;
   var NS = 'http://www.w3.org/2000/svg';
-  var keys = ['name','who','me','time','body'];
+  var keys = ['name','who','me','body'];
 
   function els(k){
     return {

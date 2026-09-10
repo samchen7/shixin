@@ -1,29 +1,10 @@
 import { get, list } from '@vercel/blob';
-
-const COOKIE = 'shixin_dl';
-const CODE = '9119';
+import { accessCode, grantHeaders, hasCookie, json, sessionIsPaid } from '../lib/entitlement.js';
 
 export const maxDuration = 60;
 
 function apkPath() {
   return process.env.SHIXIN_APK_PATHNAME || 'shixin.apk';
-}
-
-function cookieHeader(secure) {
-  const parts = [`${COOKIE}=1`, 'Path=/', 'HttpOnly', 'SameSite=Lax', 'Max-Age=86400'];
-  if (secure) parts.push('Secure');
-  return parts.join('; ');
-}
-
-function hasCookie(request) {
-  return (request.headers.get('cookie') || '').split(';').some((part) => part.trim() === `${COOKIE}=1`);
-}
-
-function json(status, body, headers) {
-  return new Response(JSON.stringify(body), {
-    status,
-    headers: { 'content-type': 'application/json; charset=utf-8', ...headers }
-  });
 }
 
 async function loadApk() {
@@ -38,19 +19,28 @@ async function loadApk() {
 }
 
 export async function POST(request) {
+  if (hasCookie(request)) return json(200, { ok: true }, grantHeaders(request));
+
   let payload = {};
   try { payload = await request.json(); } catch (_) {}
-  if (String(payload.code || '').trim() !== CODE) {
-    return json(403, { ok: false });
+  const code = String(payload.code || '').trim();
+  const sessionId = String(payload.session_id || '').trim();
+
+  try {
+    if (sessionId && await sessionIsPaid(sessionId)) {
+      return json(200, { ok: true }, grantHeaders(request));
+    }
+  } catch (error) {
+    console.error('shixin download claim failed', error);
+    return json(500, { error: 'unavailable' });
   }
-  const secure = new URL(request.url).protocol === 'https:';
-  return json(200, { ok: true }, { 'set-cookie': cookieHeader(secure) });
+
+  if (!code || code !== accessCode()) return json(403, { ok: false });
+  return json(200, { ok: true }, grantHeaders(request));
 }
 
 export async function GET(request) {
-  if (!hasCookie(request)) {
-    return json(401, { error: 'locked' });
-  }
+  if (!hasCookie(request)) return json(401, { error: 'locked' });
   try {
     const blob = await loadApk();
     if (!blob || blob.statusCode !== 200) {

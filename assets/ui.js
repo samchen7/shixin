@@ -18,7 +18,6 @@
     cmp.querySelectorAll('.pane [data-k="who"]').forEach(function (item) { item.textContent = contact.number; });
     cmp.querySelectorAll('.pane [data-k="me"]').forEach(function (item) { item.textContent = contact.mine; });
     cmp.querySelector('.sms [data-k="time"]').textContent = contact.date;
-    cmp.querySelector('.gm [data-k="time"]').textContent = contact.date + ' ' + contact.time;
     cmp.querySelector('.stamp').textContent = contact.time;
     cmp.querySelectorAll('.thread > div').forEach(function (item, index) { item.textContent = contact.messages[index]; });
     var glue = window.ShixinI18n.getLang() === 'zh' ? '：' : ': ';

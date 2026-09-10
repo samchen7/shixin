@@ -8,8 +8,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/styles.css">
-<link rel="stylesheet" href="/assets/saas.css">
+<link rel="stylesheet" href="/assets/styles.css?v=6">
+<link rel="stylesheet" href="/assets/saas.css?v=6">
 </head>
 <body>
 <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
@@ -29,7 +29,7 @@
       <span aria-hidden="true">/</span>
       <button type="button" data-lang="zh" aria-pressed="false">中文</button>
     </div>
-    <a class="header-download btn" href="#get" data-download data-i18n="cta.download">Download</a>
+    <a class="header-download btn" href="#get" data-cta data-i18n="cta.buy">Buy</a>
   </div>
 </header>
 
@@ -39,8 +39,8 @@
     <div class="hero-copy">
       <div class="eyebrow"><span class="live-dot"></span> <span data-i18n="hero.eyebrow">Don’t lose a single message</span></div>
       <h1><span data-i18n="hero.h1a">Every message you send or receive</span><br><span class="title-em" data-i18n="hero.h1b">deserves to be kept safe</span></h1>
-      <p class="lede"><span data-i18n="hero.lede1">Bring SMS history from every phone and number into one inbox.</span><br class="desktop-break"><span data-i18n="hero.lede2">Sorted by contact, with the original conversation and time. Search and read whenever you need to.</span></p>
-      <div class="hero-buttons"><a class="btn" href="#get" data-download data-i18n="cta.download">Download</a><a class="demo-link" href="#demo" data-i18n="hero.demo">See the product demo</a></div>
+      <p class="lede"><span data-i18n="hero.lede1">Bring SMS history from every phone and number into one inbox.</span><br class="desktop-break"><span data-i18n="hero.lede2">Sorted by contact, with the original conversation kept intact. Search and read whenever you need to.</span></p>
+      <div class="hero-buttons"><a class="btn" href="#get" data-cta data-i18n="cta.buy">Buy</a><a class="demo-link" href="#demo" data-i18n="hero.demo">See the product demo</a></div>
       <p class="hero-note" data-i18n="hero.note">Android app</p>
     </div>
     <div class="memory-scene" data-i18n-aria="hero.scene" aria-label="Illustration of an old text saved in Gmail">
@@ -52,16 +52,15 @@
           <span>Gmail</span>
           <span class="mail-inbox" data-i18n="stories.inbox">Inbox</span>
         </div>
-        <div class="mail-heading"><span data-i18n="name.zhou">Lao Zhou</span><span class="mail-star" aria-hidden="true">☆</span></div>
+        <div class="mail-heading"><span>138 0013 8000 → 139 1234 5678</span><span class="mail-star" aria-hidden="true">☆</span></div>
         <div class="mail-chips"><span>拾信</span><span data-i18n="name.zhou">Lao Zhou</span></div>
         <div class="mail-from">
           <span class="mail-avatar">周</span>
           <div>
             <b data-i18n="name.zhou">Lao Zhou</b>
-            <small>&lt;138 0013 8000&gt;</small>
-            <em data-i18n="hero.toMe">to me</em>
+            <em data-i18n="hero.toMe">to you@gmail.com</em>
           </div>
-          <time data-i18n="hero.msgDate">Mar 12, 2014 · 23:41</time>
+          <time data-i18n="hero.fwdDate">Sep 10, 2026 · 15:12</time>
         </div>
         <p data-i18n="msg.home">Made it home? Be careful on the road.</p>
       </div>
@@ -82,7 +81,7 @@
       <div class="flow-connector" aria-hidden="true"><span class="packet">✉</span><span class="connector-arrow">›</span></div>
       <div class="workflow-stage process-stage"><div class="stage-caption"><span>02</span> <span data-i18n="how.organize">Auto-organize</span></div><div class="processor"><svg viewBox="0 0 32 32" width="42" height="42" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="7" width="26" height="19" rx="4"/><path d="m4 9 12 9L28 9"/></svg><strong>拾信</strong><div class="process-meter"><span></span></div></div><div class="process-tags"><span data-i18n="how.tagContact">Contacts</span><span data-i18n="how.tagTime">Time</span><span data-i18n="how.tagContent">Content</span></div></div>
       <div class="flow-connector destination-connector" aria-hidden="true"><span class="packet">✉</span><span class="connector-arrow">›</span></div>
-      <div class="workflow-stage destination-stage"><div class="stage-caption"><span>03</span> <span data-i18n="how.saveGmail">Save to Gmail</span></div><div class="destination-window"><div class="window-top"><strong><span class="gmail-mark">M</span> Gmail</strong><span data-i18n="how.smsArchive">SMS archive</span></div><div class="incoming-mail"><span data-i18n="name.zhou">Lao Zhou</span><b data-i18n="how.threadZhou">SMS with Lao Zhou</b><small>2014</small></div><div class="incoming-mail"><span data-i18n="name.wang">Xiao Wang</span><b data-i18n="how.threadWang">SMS with Xiao Wang</b><small>2016</small></div><div class="incoming-mail"><span data-i18n="name.phone">Phone number</span><b>138 0013 8002</b><small>2018</small></div><div class="destination-footer" data-i18n="how.done">✓ Archived</div></div></div>
+      <div class="workflow-stage destination-stage"><div class="stage-caption"><span>03</span> <span data-i18n="how.saveGmail">Save to Gmail</span></div><div class="destination-window"><div class="window-top"><strong><span class="gmail-mark">M</span> Gmail</strong><span data-i18n="how.smsArchive">SMS archive</span></div><div class="incoming-mail"><span data-i18n="name.zhou">Lao Zhou</span><b>138 0013 8000 → 139 1234 5678</b><small data-i18n="mail.fwdShort">Sep 10</small></div><div class="incoming-mail"><span data-i18n="name.wang">Xiao Wang</span><b>138 0013 8001 → 186 2345 6789</b><small data-i18n="mail.fwdShort">Sep 10</small></div><div class="incoming-mail"><span data-i18n="name.phone">Phone number</span><b>138 0013 8002 → 188 3456 7890</b><small data-i18n="mail.fwdShort">Sep 10</small></div><div class="destination-footer" data-i18n="how.done">✓ Archived</div></div></div>
     </div>
   </div>
 </section>
@@ -99,8 +98,8 @@
         </div>
         <div class="feature-visual">
           <div class="search-field"><span aria-hidden="true">⌕</span> <span data-i18n="name.zhou">Lao Zhou</span> <span class="search-cursor" aria-hidden="true"></span><span class="key-hint">↵</span></div>
-          <div class="search-result"><span class="contact-avatar">周</span><div><strong data-i18n-html="stories.hit">SMS with <mark>Lao Zhou</mark></strong><p data-i18n="stories.hitLine">Did you get it? · Got it. Thanks for thinking of me.</p></div><small>2014</small></div>
-          <div class="search-result"><span class="contact-avatar">周</span><div><strong data-i18n-html="stories.hit">SMS with <mark>Lao Zhou</mark></strong><p data-i18n="msg.home">Made it home? Be careful on the road.</p></div><small>2014</small></div>
+          <div class="search-result"><span class="contact-avatar">周</span><div><strong data-i18n-html="stories.hit"><mark>Lao Zhou</mark></strong><p>138 0013 8000 → 139 1234 5678 · <span data-i18n="stories.hitLine">Did you get it? · Got it. Thanks for thinking of me.</span></p></div><small data-i18n="mail.fwdShort">Sep 10</small></div>
+          <div class="search-result"><span class="contact-avatar">周</span><div><strong data-i18n-html="stories.hit"><mark>Lao Zhou</mark></strong><p>138 0013 8000 → 139 1234 5678 · <span data-i18n="msg.home">Made it home? Be careful on the road.</span></p></div><small data-i18n="mail.fwdShort">Sep 10</small></div>
         </div>
       </article>
       <article class="feature-card feature-archive">
@@ -128,9 +127,9 @@
           <div class="device-pills"><span data-i18n="stories.devicePc">Computer</span><span data-i18n="stories.devicePhone">Phone</span><span data-i18n="stories.deviceTablet">Tablet</span></div>
           <div class="inbox-mini">
             <div class="device-top">Gmail <span data-i18n="stories.inbox">Inbox</span></div>
-            <div><b data-i18n="name.zhou">Lao Zhou</b><span data-i18n="msg.gotIt">Did you get it?</span></div>
-            <div><b data-i18n="name.wang">Xiao Wang</b><span data-i18n="msg.weekend">See you this weekend, usual place.</span></div>
-            <div><b data-i18n="name.phone">Phone number</b><span>138 0013 8002</span></div>
+            <div><b data-i18n="name.zhou">Lao Zhou</b><span>138 0013 8000 → 139 1234 5678</span></div>
+            <div><b data-i18n="name.wang">Xiao Wang</b><span>138 0013 8001 → 186 2345 6789</span></div>
+            <div><b data-i18n="name.phone">Phone number</b><span>138 0013 8002 → 188 3456 7890</span></div>
           </div>
         </div>
       </article>
@@ -141,7 +140,7 @@
 <section id="demo">
   <div class="wrap sec">
     <h2 data-i18n="demo.h2">The original conversation, intact.</h2>
-    <p class="sub" data-i18n="demo.sub">The contact becomes the sender. Your number at the time becomes the recipient. The time becomes the date. The thread becomes a label. Not a word is changed.</p>
+    <p class="sub" data-i18n="demo.sub">The sender nickname becomes From. The two phone numbers become the subject. Your registered email is To. The forwarding time becomes the date. Not a word is changed.</p>
 
     <div class="demo-toolbar"><div class="contact-switch" role="group" data-i18n-aria="demo.pick" aria-label="Choose a sample contact"><button type="button" data-contact="zhou" aria-pressed="true" data-i18n="name.zhou">Lao Zhou</button><button type="button" data-contact="wang" aria-pressed="false" data-i18n="name.wang">Xiao Wang</button><button type="button" data-contact="phone" aria-pressed="false" data-i18n="name.phone">Phone number</button></div><span data-i18n="demo.hint">Click a contact to see the archived version · sample data</span></div>
     <div class="cmp" id="cmp" aria-live="polite">
@@ -169,11 +168,11 @@
 
       <div class="pane gm">
         <div class="cap" data-i18n="demo.inGmail">In Gmail</div>
-        <div class="subj"><span data-i18n="demo.smsWithBefore">SMS with </span><span class="lk" data-k="name">Lao Zhou</span><span data-i18n="demo.smsWithAfter"></span></div>
+        <div class="subj"><span class="lk" data-k="who">138 0013 8000</span> → <span class="lk" data-k="me">139 1234 5678</span></div>
         <div class="meta">
-          <div><em data-i18n="demo.from">From</em><span class="lk" data-k="who">138 0013 8000</span></div>
-          <div><em data-i18n="demo.to">To</em><span class="lk" data-k="me">139 1234 5678</span></div>
-          <div><em data-i18n="demo.date">Date</em><span class="lk" data-k="time" data-i18n="demo.dateZhouFull">Mar 12, 2014 23:41</span></div>
+          <div><em data-i18n="demo.from">From</em><span class="lk" data-k="name">Lao Zhou</span></div>
+          <div><em data-i18n="demo.to">To</em><span data-i18n="demo.email">you@gmail.com</span></div>
+          <div><em data-i18n="demo.date">Date</em><span data-i18n="demo.fwdDate">Sep 10, 2026 15:12</span></div>
           <div><em data-i18n="demo.label">Label</em><span class="tag lk" data-k="name">Lao Zhou</span></div>
         </div>
         <div class="body lk" data-k="body">
@@ -188,7 +187,7 @@
 
 <section id="get">
   <div class="wrap end">
-    <div class="purchase-layout"><div class="purchase-copy"><h2><span data-i18n="get.h2a">From now on,</span><br><span data-i18n="get.h2b">don’t lose a single message</span></h2><p data-i18n="get.p">Download the Android app and file your SMS history in your own Gmail.</p><ol class="purchase-steps"><li><span class="step-index">1</span><span data-i18n="get.step1">Click download</span></li><li><span class="step-index">2</span><span data-i18n="get.step2">Enter your code</span></li><li><span class="step-index">3</span><span data-i18n="get.step3">Unlock and download</span></li></ol></div><div class="purchase-card"><div class="plan-top"><strong data-i18n="get.plan">拾信</strong><span data-i18n="get.badge">Early access</span></div><p class="plan-access" data-i18n="get.access">Unlock with a code</p><p class="plan-description" data-i18n="get.planDesc">For now, an activation code is your proof of purchase.</p><ul><li data-i18n="get.feat1">Archive SMS to Gmail</li><li data-i18n="get.feat2">Organized by contact and time</li><li data-i18n="get.feat3">Search and read in Gmail</li></ul><a class="btn" href="#get" data-download data-i18n="cta.download">Download</a><p class="purchase-note" id="purchase-note" data-i18n="get.note">Have a code? Click download, then verify.</p><p class="plan-meta" data-i18n="get.meta">Android 6.0+ · APK</p></div></div>
+    <div class="purchase-layout"><div class="purchase-copy"><h2><span data-i18n="get.h2a">From now on,</span><br><span data-i18n="get.h2b">don’t lose a single message</span></h2><p data-i18n="get.p">Download the Android app and file your SMS history in your own Gmail.</p><ol class="purchase-steps"><li><span class="step-index">1</span><span data-i18n="get.step1">Click buy</span></li><li><span class="step-index">2</span><span data-i18n="get.step2">Pay once</span></li><li><span class="step-index">3</span><span data-i18n="get.step3">Unlock the installer and how-to</span></li></ol></div><div class="purchase-card"><div class="plan-top"><strong data-i18n="get.plan">拾信</strong><span data-i18n="get.badge">One-time</span></div><p class="plan-access" data-i18n="get.access">Pay once</p><p class="plan-description" data-i18n="get.planDesc">Unlock the Android installer and the how-to.</p><ul><li data-i18n="get.feat1">Archive SMS to Gmail</li><li data-i18n="get.feat2">Organized by contact and time</li><li data-i18n="get.feat3">Search and read in Gmail</li><li data-i18n="get.feat4">Unlock the installer and the overseas SMS-by-email guide</li></ul><a class="btn" href="#get" data-cta data-i18n="cta.buy">Buy</a><a class="purchase-guide" href="#get" data-download data-guide data-i18n="get.guideCta">How to use — unlocks with purchase</a><button type="button" class="purchase-code" data-download data-i18n="get.codeLink">I have an activation code</button><p class="purchase-note" id="purchase-note" data-i18n="get.note">After payment, the installer and how-to unlock in this browser.</p><p class="plan-meta" data-i18n="get.meta">Android 6.0+ · APK</p></div></div>
   </div>
 </section>
 
@@ -202,18 +201,54 @@
 <div class="gate" id="gate" hidden>
   <div class="gate-card" role="dialog" aria-modal="true" aria-labelledby="gate-title" aria-describedby="gate-lead">
     <button type="button" class="gate-close" id="gate-cancel" data-i18n-aria="gate.close" aria-label="Close download">×</button>
-    <p class="section-kicker" data-i18n="kicker.gate">SHIXIN / DOWNLOAD</p><h2 id="gate-title" data-i18n="gate.title">Unlock the download</h2>
-    <p class="gate-lead" id="gate-lead" data-i18n="gate.lead">Enter your activation code to verify purchase.</p>
-    <ol class="checkout-progress" data-i18n-aria="gate.steps" aria-label="Download steps"><li id="verify-step" aria-current="step"><span class="step-index">1</span><span data-i18n="gate.step1">Verify</span></li><li id="download-step"><span class="step-index">2</span><span data-i18n="gate.step2">Download</span></li></ol>
-    <form id="gate-form"><label class="gate-label" for="gate-code" data-i18n="gate.code">Activation code</label><input id="gate-code" name="code" type="text" autocomplete="off" spellcheck="false" data-i18n-placeholder="gate.placeholder" placeholder="Enter your activation code" required aria-describedby="gate-err"><div class="gate-actions"><button type="submit" class="btn" data-i18n="gate.submit">Verify and unlock</button></div><p class="gate-footnote" data-i18n="gate.footnote">Activation codes only for now. Online payment is not open yet.</p></form>
-    <div id="gate-success" hidden><div class="unlock-badge" aria-hidden="true">✓</div><h3 data-i18n="gate.unlocked">Download unlocked</h3><p id="download-status" role="status" data-i18n="gate.preparing">Preparing the installer…</p><button type="button" class="btn" id="download-again" data-i18n="gate.downloadApk">Download APK</button><p class="gate-footnote" data-i18n="gate.session">You can download again in this browser session.</p></div>
+    <p class="section-kicker" id="gate-kicker" data-i18n="kicker.gate">SHIXIN / DOWNLOAD</p><h2 id="gate-title" data-i18n="gate.title">Unlock the download</h2>
+    <p class="gate-lead" id="gate-lead" data-i18n="gate.lead">Pay on the site, or enter an activation code.</p>
+    <ol class="checkout-progress" id="gate-progress" data-i18n-aria="gate.steps" aria-label="Download steps"><li id="verify-step" aria-current="step"><span class="step-index">1</span><span data-i18n="gate.step1">Verify</span></li><li id="download-step"><span class="step-index">2</span><span data-i18n="gate.step2">Download</span></li></ol>
+    <form id="gate-form"><label class="gate-label" for="gate-code" data-i18n="gate.code">Activation code</label><input id="gate-code" name="code" type="text" autocomplete="off" spellcheck="false" data-i18n-placeholder="gate.placeholder" placeholder="Enter your activation code" required aria-describedby="gate-err"><div class="gate-actions"><button type="submit" class="btn" data-i18n="gate.submit">Verify and unlock</button></div><p class="gate-footnote" data-i18n="gate.footnote">Prefer to pay? Close this window and tap Buy.</p></form>
+    <div id="gate-success" hidden>
+      <div class="workspace-tabs" role="tablist" data-i18n-aria="gate.tabs" aria-label="Your purchase">
+        <button type="button" role="tab" id="tab-download" aria-controls="panel-download" aria-selected="true" data-i18n="gate.tabDownload">Download</button>
+        <button type="button" role="tab" id="tab-guide" aria-controls="panel-guide" aria-selected="false" tabindex="-1" data-i18n="gate.tabGuide">How to use</button>
+      </div>
+      <div id="panel-download" role="tabpanel" aria-labelledby="tab-download">
+        <div class="unlock-badge" aria-hidden="true">✓</div>
+        <h3 data-i18n="gate.unlocked">Download unlocked</h3>
+        <p id="download-status" role="status" data-i18n="gate.ready">The installer is ready. Download it whenever you need.</p>
+        <button type="button" class="btn" id="download-again" data-i18n="gate.downloadApk">Download APK</button>
+        <p class="gate-footnote" data-i18n="gate.session">You can download again in this browser session.</p>
+        <button type="button" class="guide-switch" id="open-guide" data-i18n="guide.fromDownload">After installing on the leftover SIM phone, open How to use.</button>
+      </div>
+      <div id="panel-guide" role="tabpanel" aria-labelledby="tab-guide" hidden>
+        <p class="guide-lede" data-i18n="guide.lede">Leave the SIM where it is. You stay overseas. Send and receive that number’s SMS from your email.</p>
+        <ol class="guide-steps">
+          <li>
+            <h4 data-i18n="guide.s1t">1. Which phone</h4>
+            <p data-i18n="guide.s1p">Install the app on the leftover Android phone that still has the SIM. Sign in with the same email you use every day, then turn on Gateway. That phone must stay on and able to send and receive SMS. Your overseas phone does not need the app.</p>
+          </li>
+          <li>
+            <h4 data-i18n="guide.s2t">2. Incoming SMS</h4>
+            <p data-i18n="guide.s2p">Texts that arrive on the SIM are forwarded to your inbox as email. Read them there — you don’t need to operate the leftover phone remotely.</p>
+          </li>
+          <li>
+            <h4 data-i18n="guide.s3t">3. Send a new SMS</h4>
+            <p data-i18n="guide.s3p">Compose a new email to:</p>
+            <p class="guide-address"><code data-i18n="guide.address">+[country code][number]@sms.airppp.com</code></p>
+            <p data-i18n="guide.s3note">The plus sign is required. For the US use +1…@sms.airppp.com; for China, +86…@sms.airppp.com. Put the SMS text in the body; the subject works too.</p>
+          </li>
+          <li>
+            <h4 data-i18n="guide.s4t">4. Reply to an SMS</h4>
+            <p data-i18n="guide.s4p">Don’t start a new email. Reply to the notification that someone texted you. Your reply is sent back as SMS.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
     <p class="gate-err" id="gate-err" role="alert" hidden></p>
   </div>
 </div>
-<script src="/assets/i18n.js" defer></script>
-<script src="/assets/access.js" defer></script>
-<script src="/assets/ui.js" defer></script>
-<script src="/assets/wires.js" defer></script>
-<script src="/assets/download.js" defer></script>
+<script src="/assets/i18n.js?v=6" defer></script>
+<script src="/assets/access.js?v=5" defer></script>
+<script src="/assets/ui.js?v=5" defer></script>
+<script src="/assets/wires.js?v=5" defer></script>
+<script src="/assets/download.js?v=5" defer></script>
 </body>
 </html>
