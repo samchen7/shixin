@@ -115,4 +115,40 @@
   48%,100%{opacity:0;left:100%}
 }
 
+/* Mobile hero: keep copy and the SMS→Gmail mock inside the viewport. */
+@media(max-width:860px){
+  .hero{overflow:visible}
+  .hero-grid,.hero-copy,.memory-scene{min-width:0;max-width:100%}
+  .desktop-break{display:none}
+  html[lang="en"] .lede [data-i18n="hero.lede1"]::after{content:" "}
+  .hero .lede{max-width:none}
+  .eyebrow{white-space:nowrap}
+  .memory-scene{width:100%;max-width:460px;height:520px}
+  .message-card{width:calc(100% - 36px);max-width:330px}
+  .mail-card{min-width:0;left:28px}
+}
+@media(max-width:600px){
+  .hero h1{font-size:clamp(26px,8vw,34px);letter-spacing:-.03em}
+  .hero-copy{padding-bottom:0}
+  .hero-buttons{flex-wrap:wrap;justify-content:center;gap:12px 18px;margin-top:22px}
+  .hero-note{margin-top:12px}
+  .memory-scene{height:auto;overflow:visible;margin-top:8px}
+  .message-card,.mail-card,.saved-note{
+    position:relative;
+    inset:auto;
+    width:100%;
+    min-width:0;
+    transform:none;
+  }
+  .message-card{padding:16px 16px 18px;max-width:none}
+  .message-card>p{font-size:16px;margin:14px 0 8px}
+  .mail-card{width:calc(100% - 16px);margin:-22px 0 0 16px;padding:0}
+  .saved-note{width:fit-content;max-width:100%;margin-top:12px;padding:10px 12px}
+  .mail-card .mail-heading{font-size:16px;padding:10px 14px 2px}
+  .mail-card .mail-from{flex-wrap:nowrap;align-items:center;padding:2px 14px 8px;gap:8px}
+  .mail-card .mail-from small{display:none}
+  .mail-card .mail-from time{margin-left:auto;white-space:nowrap;font-size:10px;padding-top:0}
+  .mail-card>p{padding:0 14px 14px 54px}
+}
+
 

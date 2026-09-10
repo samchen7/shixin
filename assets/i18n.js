@@ -13,7 +13,7 @@
       'lang.label': 'Language',
       'cta.download': 'Download',
       'kicker.gate': 'SHIXIN / DOWNLOAD',
-      'hero.eyebrow': 'Don’t lose a single message',
+      'hero.eyebrow': "Don't lose a single message",
       'hero.h1a': 'Every message you send or receive',
       'hero.h1b': 'deserves to be kept safe',
       'hero.lede1': 'Bring SMS history from every phone and number into one inbox.',
